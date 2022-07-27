@@ -17,7 +17,10 @@ class QuestionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => 1,
+            'body' => \implode('</p><p>',\fake()->paragraphs(4)),
+            'is_published' => \mt_rand(0, 1),
+            'category' => 'Matematika',
         ];
     }
 }

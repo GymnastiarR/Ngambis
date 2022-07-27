@@ -6,12 +6,12 @@
             </a>
         </x-slot>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
         <form method="POST" action="{{ route('register') }}">
             @csrf
+            <h1 class="text-3xl text-center font-bold mb-4">Register</h1>
 
+            <!-- Validation Errors -->
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
             <!-- Name -->
             <div>
                 <x-label for="name" :value="__('Name')" />

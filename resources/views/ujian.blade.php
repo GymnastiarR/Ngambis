@@ -9,8 +9,49 @@
         <x-header-menu>
             
         </x-header-menu>
-        <div class="my-7 py-8 lg:px-16 px-2 bg-white shadow-2xl flex flex-col w-full box-border">
-            <p id="time">05:10</p>
+        <div class="flex bg-white shadow-2xl w-full px-8 py-10 rounded-lg my-5">
+            <div class="w-4/5 px-8">
+                <form action="{{ route('ujian.nilai') }}" method="POST">
+                    @csrf
+                    <ul class="justify-evenly flex-wrap w-full">
+                        @foreach ($questions as $question)
+                            <li class="py-2 flex border-b-2 mb-4" id="{{ $question->id }}">
+                                <div>
+                                    <p class="inline-block w-10">
+                                        {{ $loop->iteration }}.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div class="mb-4">
+                                        {!! $question->body !!}
+                                    </div>
+                                    <div >
+                                        @foreach ($question->options as $option)
+                                        <input class="mr-3" type="radio" name="{{ $question->id }}" id="{{ $option->id }}" value="{{ $option->id }}"><label for="">a. {!! $option->body !!}</label>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                    <div>
+                        <button class="bg-blue-200 py-4 px-5 rounded-3xl text-lg font-semibold">Kirim Jawaban</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="w-1/5 sticky top-0 max-h-fit">
+                <div class="bg-white w-full p-7 mb-5 shadow-lg sticky top-10">
+                    <ul class="flex justify-evenly flex-wrap w-full">
+                        @foreach ($questions as $question)
+                            <li name="{{ $question->id }}" class="w-[40px] h-[40px] text-center py-2 bg-gray-300 mb-3" ><a href="#{{ $question->id }}">{{ $loop->iteration }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="my-3 py-3 px-2 bg-whiteflex flex-col w-full box-border rounded-full justify-center bg-blue-200 flex sticky top-72">
+                    <span>Time</span><p id="time" class="text-2xl">{{ $coutdown }}</p>
+                </div>
+            </div>
         </div>
     </div>
     <script src="/js/jquery.js"></script>
@@ -22,7 +63,7 @@
             if(time.length > 0){
                 minutes = (parseInt(time[0]) * 60);
             }
-            let temp = minutes + parseInt(time[1]);
+            let temp = minutes + parseInt(time[1]); 
             if(temp == 0){
                 window.location.assign("/");
             }
@@ -39,22 +80,15 @@
 
 
             $('#time').html(`${minutes}:${seconds}`);
-
-            // time = time.split(':');
-            // if(time[1] == '00'){
-            //     time[0] = time[0] - 1;
-            //     time[1] = '59';
-            // }
-            // else{
-            //     time[1] = time[1] - 1;
-            //     if(time[1].split().length == 1){
-            //         time[1] = '0' + time[1];
-            //     }
-            // }
-            // time = time.join(':');
-            // console.log(time);
-            // $('#time').html(time);
-            // console.log("Here");
         }, 1000);
+
+        $('input[type="radio"]').on('input', (e)=>{
+
+            let id = e.target.getAttribute('name')
+            // console.log(e.target.getAttribute('name'));
+            // console.log($(`li[name = '${id}']`));
+            $(`li[name = '${id}']`).removeClass('bg-gray-300');
+            $(`li[name = '${id}']`).addClass('bg-blue-200');
+        });
     </script>
 </x-app-layout>

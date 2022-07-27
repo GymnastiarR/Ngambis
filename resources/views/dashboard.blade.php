@@ -20,14 +20,14 @@
                     <h2 class="text-white font-extrabold text-2xl mb-3">Point Kamu</h2>
                     <div class="border-b-4 w-2/5"></div>
                 </div>
-                <p class="text-center text-white text-4xl font-extrabold ">80</p>
+                <p class="text-center text-white text-4xl font-extrabold ">{{ $point }}</p>
             </div>
             <div class="w-[350px] bg-[#A4DEFF] h-[350px] rounded-[80px] p-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
                 <div>
                     <h2 class="text-white font-extrabold text-2xl mb-3">Jumlah Survei Kamu</h2>
                     <div class="border-b-4 w-2/5"></div>
                 </div>
-                <p class="text-center text-white text-4xl font-extrabold ">80</p>
+                <p class="text-center text-white text-4xl font-extrabold ">{{ $jumlah }}</p>
             </div>
             <div class="w-[350px] bg-[#A4DEFF] h-[350px] rounded-[80px] p-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-around">
                 <div>

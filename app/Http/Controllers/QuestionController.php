@@ -6,6 +6,8 @@ use App\Models\Question;
 use App\Http\Requests\StoreQuestionRequest;
 use App\Http\Requests\UpdateQuestionRequest;
 use App\Models\Option;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class QuestionController extends Controller
 {
@@ -16,7 +18,10 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return "Heelo";
+        // Question::where('user_id', Auth::user()->id);
+        return \view('soal', [
+            'questions' => Question::where('user_id', Auth::user()->id)->get(),
+        ]);
     }
 
     /**
@@ -42,37 +47,47 @@ class QuestionController extends Controller
         // return $request->all();
         $question = Question::create([
             'body' => $request->question,
-            'id_user' => 1,
+            'user_id' => 1,
             'is_published' => $request->is_published,
+            'category' => $request->category,
         ]);
+
+        if($request->is_published){
+            $user = User::find(Auth::user()->id);
+            $user->point = $user->point + 10;
+            $user->save();
+        }
 
         // return ($request->is_true == 'opsi_satu') ? 1 : 0;
 
         Option::create([
-            'id_question' => $question->id,
+            'question_id' => $question->id,
             'body' => $request->opsi_satu,
             'is_true' => ($request->is_true == 'opsi_satu') ? 1 : 0 ,
         ]);
         Option::create([
-            'id_question' => $question->id,
+            'question_id' => $question->id,
             'body' => $request->opsi_dua,
             'is_true' => ($request->is_true == 'opsi_dua') ? 1 : 0 ,
         ]);
         Option::create([
-            'id_question' => $question->id,
+            'question_id' => $question->id,
             'body' => $request->opsi_tiga,
             'is_true' => ($request->is_true == 'opsi_tiga') ? 1 : 0 ,
         ]);
         Option::create([
-            'id_question' => $question->id,
+            'question_id' => $question->id,
             'body' => $request->opsi_empat,
             'is_true' => ($request->is_true == 'opsi_empat') ? 1 : 0 ,
         ]);
         Option::create([
-            'id_question' => $question->id,
+            'question_id' => $question->id,
             'body' => $request->opsi_lima,
             'is_true' => ($request->is_true == 'opsi_empat') ? 1 : 0 ,
         ]);
+
+
+
     }
 
     /**

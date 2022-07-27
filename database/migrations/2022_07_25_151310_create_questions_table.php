@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user');
+            $table->foreignId('user_id');
             $table->text('body');
             $table->string('category');
             $table->boolean('is_published')->default(0)->nullable();

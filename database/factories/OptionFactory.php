@@ -14,10 +14,32 @@ class OptionFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected static $i = 0;
     public function definition()
     {
+        self::$i++;
+
         return [
-            //
+            // [
+                'body' => \fake()->word(),
+                'question_id' => self::$i,
+                'is_true' => 1
+            // ],
+            // [
+            //     'body' => \fake()->word(),
+            //     'id_question' => self::$i,
+            //     'is_true' => 0
+            // ],
+            // [
+            //     'body' => \fake()->word(),
+            //     'id_question' => self::$i,
+            //     'is_true' => 0
+            // ],
+            // [
+            //     'body' => \fake()->word(),
+            //     'id_question' => self::$i,
+            //     'is_true' => 0
+            // ],
         ];
     }
 }

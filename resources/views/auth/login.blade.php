@@ -9,12 +9,14 @@
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
+        
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
+            <h1 class="text-3xl text-center font-bold mb-4">Login</h1>
+            
+            <!-- Validation Errors -->
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
+            
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />

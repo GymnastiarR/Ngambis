@@ -8,16 +8,18 @@
         <x-header-menu>
             
         </x-header-menu>
-        <div class="my-7 py-8 lg:px-16 px-2 bg-white shadow-2xl flex flex-col w-full box-border rounded-2xl bg-gradient-to-br from-slate-200 to-blue-200">
+        <div class="my-7 py-8 lg:px-16 px-2 shadow-2xl flex flex-col w-full box-border rounded-2xl">
             <h1 class="text-4xl font-bold mb-4">Pilih Ujian</h1>
             <div class="border-b-4 border-slate-600 w-24"></div>
             <div>
+                {{-- bg-gradient-to-br from-[#86A1FF] to-[#826C93] --}}
+                {{-- bg-gradient-to-br from-slate-200 to-blue-200 --}}
                 <div class="mb-6 flex flex-col items-center">
                     <h2 class="text-3xl font-semibold mb-1">TKA</h2>
                     <div class="border-b-4 border-slate-600 w-24"></div>
                 </div>
                 <div class="flex flex-wrap justify-evenly mb-7">
-                    <div name="card" data-to="matematika" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg transition">
+                    <div name="card" data-to="matematika" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg transition-all hover:to-[#86A1FF] hover:from-[#826C93] ">
                         <div class="flex justify-between">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-divide fa-2xl"></i> 
@@ -28,7 +30,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-center">Matematika</h3>
                     </div>
-                    <div name="card" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="matematika" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
                         <div class="flex justify-between" >
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-flask-vial fa-2xl"></i>
@@ -39,13 +41,13 @@
                         </div>
                         <h3 class="text-2xl font-bold text-center">Kimia</h3>
                     </div>
-                    <div name="card" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="matematika" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
                         <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                         <i class="fa-solid fa-atom fa-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-center">Fisika</h3>
                     </div>
-                    <div name="card" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="matematika" class="w-60 h-60 rounded-[35px] mr-6 p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
                         <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                         <i class="fa-solid fa-dna fa-2xl"></i>
                         </div>

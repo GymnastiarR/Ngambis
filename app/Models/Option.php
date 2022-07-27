@@ -12,4 +12,8 @@ class Option extends Model
     protected $guarded = [
         'id',
     ];
+
+    public function question(){
+        return $this->belongsTo(Question::class);
+    }
 }

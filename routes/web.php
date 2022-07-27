@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UjianController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +19,10 @@ use App\Http\Controllers\UjianController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home2');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
 // Route::get('/new-soal', function () {
 //     return view('new-survei');
@@ -35,13 +35,13 @@ Route::get('/latihan', function () {
     return view('latihan');
 });
 
-// Route::get('/ujian/{category}/{time}', function ($category, $time) {
-//     return $time;
-// });
-
 Route::get('/ujian/{category}/{time}', [UjianController::class, 'index']);
 
 Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
+
+Route::post('ujian/nilai', function(){
+    return "Here";
+})->name('ujian.nilai');
 
 
 require __DIR__.'/auth.php';

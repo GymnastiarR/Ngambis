@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_question');
-            $table->foreign('id_question')->references('id')->on('questions')->onDelete('cascade');
+            $table->foreignId('question_id');
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->text('body')->nullable();
             $table->boolean('is_true')->default(0)->nullable();
             $table->timestamps();
