@@ -20,7 +20,7 @@ class QuestionController extends Controller
     {
         // Question::where('user_id', Auth::user()->id);
         return \view('soal', [
-            'questions' => Question::where('user_id', Auth::user()->id)->get(),
+            'questions' => Question::where('user_id', Auth::user()->id)->paginate(10),
         ]);
     }
 
@@ -86,8 +86,7 @@ class QuestionController extends Controller
             'is_true' => ($request->is_true == 'opsi_empat') ? 1 : 0 ,
         ]);
 
-
-
+        return \redirect()->intended('soal')->with('success', 'Soal Berhasil Dibuat');
     }
 
     /**

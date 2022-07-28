@@ -28,20 +28,18 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 //     return view('new-survei');
 // });
 
-Route::post('soal', [QuestionController::class, 'store']);
-Route::resource('soal', QuestionController::class);
+Route::post('soal', [QuestionController::class, 'store'])->middleware(['verified']);
+Route::resource('soal', QuestionController::class)->middleware(['verified']);
 
 Route::get('/latihan', function () {
     return view('latihan');
-});
+})->middleware(['auth']);
 
 Route::get('/ujian/{category}/{time}', [UjianController::class, 'index']);
 
 Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
 
-Route::post('ujian/nilai', function(){
-    return "Here";
-})->name('ujian.nilai');
+Route::post('ujian/nilai', [UjianController::class, 'grade'])->name('ujian.nilai');
 
 
 require __DIR__.'/auth.php';

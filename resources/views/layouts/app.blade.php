@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/9aa4e74c46.js" crossorigin="anonymous"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
     </head>
-    <body class="font-sans antialiased bg-gradient-to-br from-slate-200 to-blue-200 p-2 lg:p-6 flex min-h-screen box-border">
+    <body class="font-sans antialiased bg-gradient-to-br from-slate-200 to-blue-200  p-2 lg:p-6 flex flex-col-reverse md:flex-row min-h-screen box-border">
         {{-- <div class="min-h-screen bg-gray-100"> --}}
             {{-- @include('layouts.navigation') --}}
 
@@ -26,12 +26,12 @@
                 </div>
             </header> --}}
             
-            <aside class="rounded-full sm:w-20 w-1/6 max-h-[90vh] sticky top-7 bg-gradient-to-b from-[#6F7DFF] to-[#8186ADBD] flex flex-col items-center py-10 border-white border-r-">
+            <aside class="rounded-full md:w-20 h-12 md:min-h-[90vh] fixed bottom-1 left-1 right-1 z-20 md:sticky md:top-7 bg-gradient-to-b from-[#6F7DFF] to-[#8186AD] md:to-[#8186ADBD] flex md:flex-col items-center justify-center md:justify-start md:py-10">
                 {{ $sidemenu }}
             </aside>
 
             <!-- Page Content -->
-            <main class="sm:w-full w-5/6">
+            <main class="w-full">
                 {{ $slot }}
             </main>
         {{-- </div> --}}

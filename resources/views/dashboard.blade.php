@@ -14,27 +14,38 @@
         <x-header-menu>
             
         </x-header-menu>
-        <div class="py-12 lg:px-14 px-2 flex justify-between w-full">
-            <div class="w-[350px] bg-[#A4DEFF] h-[350px] rounded-[80px] p-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
-                <div>
-                    <h2 class="text-white font-extrabold text-2xl mb-3">Point Kamu</h2>
-                    <div class="border-b-4 w-2/5"></div>
+        <div class="my-7 py-12 lg:px-10 px-2 shadow-2xl flex flex-col w-full box-border rounded-2xl">
+            <div class="flex justify-around md:justify-around flex-wrap w-full">
+                <div class=" mb-4 w-[240px] md:w-[360px] bg-[#A4DEFF] h-[240px] md:h-[360px] rounded-[40px] lg:rounded-[80px] p-6 pb-16 lg:py-16 lg:px-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-slate-200 font-extrabold text-lg md:text-2xl mb-3">Point Kamu</h2>
+                        <div class="border-b-4 w-2/5"></div>
+                    </div>
+                    <p class="text-center text-white text-8xl font-extrabold ">{{ $point }}</p>
+                    <p class="text-center">
+                        <a href="" class="underline text-white text-lg ">Tukar Point</a>
+                    </p>
                 </div>
-                <p class="text-center text-white text-4xl font-extrabold ">{{ $point }}</p>
-            </div>
-            <div class="w-[350px] bg-[#A4DEFF] h-[350px] rounded-[80px] p-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
-                <div>
-                    <h2 class="text-white font-extrabold text-2xl mb-3">Jumlah Survei Kamu</h2>
-                    <div class="border-b-4 w-2/5"></div>
+                <div class=" mb-4 w-[240px] md:w-[360px] bg-[#A4DEFF] h-[240px] md:h-[360px] rounded-[40px] lg:rounded-[80px] p-6 pb-16 lg:py-16 lg:px-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-white font-extrabold text-lg md:text-2xl mb-3">Jumlah Soal Kamu</h2>
+                        <div class="border-b-4 w-2/5"></div>
+                    </div>
+                    <p class="text-center text-white text-4xl md:text-7xl font-extrabold ">{{ $jumlah }}</p>
+                    <p class="text-center">
+                        <a href="" class="underline text-white text-lg ">Lihat Detail</a>
+                    </p>
                 </div>
-                <p class="text-center text-white text-4xl font-extrabold ">{{ $jumlah }}</p>
-            </div>
-            <div class="w-[350px] bg-[#A4DEFF] h-[350px] rounded-[80px] p-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-around">
-                <div>
-                    <h2 class="text-white font-extrabold text-2xl mb-3">Jumlah Seluruh Responden</h2>
-                    <div class="border-b-4 w-2/5"></div>
+                <div class=" mb-4 w-[240px] md:w-[360px] bg-[#A4DEFF] h-[240px] md:h-[360px] rounded-[40px] lg:rounded-[80px] p-6 pb-16 lg:py-16 lg:px-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-white font-extrabold text-lg md:text-2xl mb-3">Waktu Tercepat</h2>
+                        <div class="border-b-4 w-2/5"></div>
+                    </div>
+                    <p class="text-center text-white text-4xl md:text-7xl font-extrabold ">80</p>
+                    <p class="text-center">
+                        <a href="" class="underline text-white text-lg ">Tukar Point</a>
+                    </p>
                 </div>
-                <p class="text-center text-white text-7xl font-extrabold ">80</p>
             </div>
         </div>
     </div>
