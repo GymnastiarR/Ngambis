@@ -30,7 +30,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Matematika</h3>
                     </div>
-                    <div name="card" data-to="Kimia" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="Kimia" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                         <div class="flex justify-between" >
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-flask-vial md:fa-2xl fa-lg"></i>
@@ -41,7 +41,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Kimia</h3>
                     </div>
-                    <div name="card" data-to="Fisika" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="Fisika" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                         <div class="flex justify-between">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-atom md:fa-2xl fa-lg"></i>
@@ -52,7 +52,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Fisika</h3>
                     </div>
-                    <div name="card" data-to="Biologi" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="Biologi" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                         <div class="flex justify-between">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-dna md:fa-2xl fa-lg"></i>
@@ -63,7 +63,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Biologi</h3>
                     </div>
-                    <div name="card" data-to="matematika" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg transition-all hover:to-[#86A1FF] hover:from-[#826C93] ">
+                    <div name="card" data-to="ekonomi" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg transition-all hover:to-[#86A1FF] hover:from-[#826C93] ">
                         <div class="flex justify-between">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-dollar-sign  md:fa-2xl fa-2xl"></i>
@@ -74,7 +74,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Ekonomi</h3>
                     </div>
-                    <div name="card" data-to="Kimia" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="geografi" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                         <div class="flex justify-between" >
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-mountain md:fa-2xl fa-lg""></i>
@@ -85,7 +85,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Geografi</h3>
                     </div>
-                    <div name="card" data-to="Fisika" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="sejarah" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                         <div class="flex justify-between">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-timeline fa-lg"></i>
@@ -96,7 +96,7 @@
                         </div>
                         <h3 class="text-lg md:text-2xl font-bold text-center">Sejarah</h3>
                     </div>
-                    <div name="card" data-to="Biologi" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                    <div name="card" data-to="sosiologi" class="cursor-pointer w-40 h-40 md:w-60 md:h-60 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                         <div class="flex justify-between">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-people-group fa-lg"></i>
@@ -114,25 +114,25 @@
                         <div class="border-b-4 border-slate-600 w-24"></div>
                     </div>
                     <div class="flex flex-wrap justify-evenly">
-                        <div class="w-40 h-40 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                        <div name="card" data-to="pu" class="w-40 h-40 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-brain md:fa-2xl fa-lg"></i>
                             </div>
                             <h3 class="text-lg md:text-2xl font-bold text-center">Penalaran Umum</h3>
                         </div>
-                        <div class="w-40 h-40 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                        <div name="card" data-to="pk" class="w-40 h-40 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                             <i class="fa-solid fa-flask-vial fa-2xl"></i>
                             </div>
                             <h3 class="text-lg md:text-2xl font-bold text-center">Pengetahuan Kuantitatif</h3>
                         </div>
-                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                        <div name="card" data-to="bacaan" class="w-48 h-48 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-book-open fa-2xl"></i>
                             </div>
                             <h3 class="text-md md:text-2xl font-bold text-center">Memahami Bacaan dan Menulis</h3>
                         </div>
-                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg">
+                        <div name="card" data-to="ppu" class="w-48 h-48 md:w-64 md:h-64 rounded-[35px] md:mr-6 mb-4 p-5 md:p-10 bg-gradient-to-tr from-[#A4DEFF] to-[#0088D4] shadow-lg hover:to-[#86A1FF] hover:from-[#826C93]">
                             <div class="w-12 h-12 flex justify-center items-center bg-gradient-to-r from-[#6F7DFF] to-[#8186ADBD] shadow-lg rounded-2xl mb-4">
                                 <i class="fa-solid fa-question fa-2xl"></i>
                             </div>

@@ -34,6 +34,7 @@ Route::get('soal/{question}/edit', [QuestionController::class, 'edit'])->middlew
 Route::put('soal/{question}', [QuestionController::class, 'update'])->middleware(['verified']);
 Route::delete('soal/{question}', [QuestionController::class, 'destroy'])->middleware(['verified']);
 Route::get('soal', [QuestionController::class, 'index'])->name('soal')->middleware(['verified']);
+Route::get('soal/create', [QuestionController::class, 'create'])->middleware(['verified']);
 Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
 
 Route::get('/latihan', function () {

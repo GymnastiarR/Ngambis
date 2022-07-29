@@ -31,7 +31,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        return \view('new-survei');
+        return \view('new-soal');
     }
 
     /**

@@ -24,10 +24,10 @@
                 <option value="Biologi">Biologi</option>
                 <option value="Fisika">Fisika</option>
                 <option value="Kimia">Kimia</option>
-                <option value="Matematika">Matematika</option>
-                <option value="Matematika">Matematika</option>
-                <option value="Matematika">Matematika</option>
-                <option value="Matematika">Matematika</option>
+                <option value="sejarah">sejarah</option>
+                <option value="sosiologi">sosiologi</option>
+                <option value="geografi">geografi</option>
+                <option value="ekonomi">ekonomi</option>
               </datalist>
             </div>
             <div class="lg:w-full mb-6 relative">
