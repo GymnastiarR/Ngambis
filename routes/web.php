@@ -37,6 +37,10 @@ Route::get('soal', [QuestionController::class, 'index'])->name('soal')->middlewa
 Route::get('soal/create', [QuestionController::class, 'create'])->middleware(['verified']);
 Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
 
+Route::get('tukar-point', function(){
+    return view('tukar');
+})->middleware(['verified']);
+
 Route::get('/latihan', function () {
     return view('latihan');
 })->name('latihan')->middleware(['auth']);
