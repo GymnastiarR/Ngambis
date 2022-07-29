@@ -20,21 +20,21 @@
         <section class="bg-[#F5F5F5] md:h-[90vh] flex-col justify-around items-center md:py-20 py-6">
             <h2 class="text-center text-xl md:text-5xl font-bold mb-4">Mengapa Harus Mendaftar?</h2>
             <div class="w-full flex flex-col md:flex-row h-full justify-evenly items-center">
-                <div class="bg-white border-2 shadow-xl h-64 md:h-3/4 mb-4 w-3/5 md:w-1/3 lg:w-1/4 rounded-[40px] p-7">
-                    <div class="text-black">
-                        <i class="fa-solid fa-coins fa-xl"></i>
+                <div class="bg-white border-2 shadow-xl h-64 md:h-3/4 md:min-h-fit mb-4 w-3/5 md:w-1/3 lg:w-1/4 rounded-[40px] p-7 flex flex-col justify-center items-center">
+                    <div class="text-black mb-10">
+                        <i class="fa-solid fa-retweet fa-6x"></i>
                     </div>
                     <h3 class="text-lg md:text-2xl font-semibold text-center">Berbagi Soal Semua Orang Dan Dapatkan Soal Baru</h3>
                 </div>
-                <div class="bg-white border-2 shadow-xl h-64 md:h-3/4 mb-4 w-3/5 md:w-1/3 lg:w-1/4 rounded-[40px] p-7">
-                    <div class="text-black">
-                        <i class="fa-solid fa-coins fa-xl"></i>
+                <div class="bg-white border-2 shadow-xl h-64 md:h-3/4 md:min-h-fit mb-4 w-3/5 md:w-1/3 lg:w-1/4 rounded-[40px] p-7 flex flex-col justify-center items-center">
+                    <div class="text-black mb-10">
+                        <i class="fa-solid fa-stopwatch fa-6x"></i>
                     </div>
                     <h3 class="text-lg md:text-2xl font-semibold text-center">Latihan Ujian Dengan Fleksibilitas Waktu Yang Dapat Ditentukan</h3>
                 </div>
-                <div class="bg-white border-2 shadow-xl h-64 md:h-3/4 mb-4 w-3/5 md:w-1/3 lg:w-1/4 rounded-[40px] p-7">
-                    <div class="text-black">
-                        <i class="fa-solid fa-coins fa-xl"></i>
+                <div class="bg-white border-2 shadow-xl h-64 md:h-3/4 md:min-h-fit mb-4 w-3/5 md:w-1/3 lg:w-1/4 rounded-[40px] p-7 flex flex-col justify-center items-center">
+                    <div class="text-black mb-10">
+                        <i class="fa-solid fa-coins fa-6x"></i>
                     </div>
                     <h3 class="text-lg md:text-2xl font-semibold text-center">Dapatkan Keuntungan Dengan Menukar Point Yang Kamu Miliki</h3>
                 </div>
