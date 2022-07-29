@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\history;
 use App\Http\Requests\StorehistoryRequest;
 use App\Http\Requests\UpdatehistoryRequest;
+use Illuminate\Support\Facades\Auth;
 
 class HistoryController extends Controller
 {
@@ -15,7 +16,9 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('histories', [
+            'histories' => history::where('user_id', Auth::user()->id)->latest()->paginate(10),
+        ]);
     }
 
     /**

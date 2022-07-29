@@ -20,7 +20,7 @@ class QuestionController extends Controller
     {
         // Question::where('user_id', Auth::user()->id);
         return \view('soal', [
-            'questions' => Question::where('user_id', Auth::user()->id)->paginate(10),
+            'questions' => Question::where('user_id', Auth::user()->id)->latest()->paginate(10),
         ]);
     }
 
@@ -108,7 +108,14 @@ class QuestionController extends Controller
      */
     public function edit(Question $question)
     {
-        //
+        // dd(Auth::user()->id . $question->user_id);
+        if(($question->user_id != Auth::user()->id)){
+            return \redirect('dashboard');
+        }
+        return \view('edit', [
+            'question' => $question,
+            'options' => $question->options,
+        ]);
     }
 
     /**
@@ -120,7 +127,40 @@ class QuestionController extends Controller
      */
     public function update(UpdateQuestionRequest $request, Question $question)
     {
-        //
+        $request->validate([
+            'body' => 'min:3,'
+        ]);
+
+        if($request->is_published){
+            $question->update([
+                'is_published' => 1,
+            ]);
+        }
+
+        $question->update([
+            'body' => $request->question,
+            'category' => $request->category,
+        ]);
+
+
+        foreach($question->options as $option){
+            $option->update(['is_true' => 0]);
+            if($option->id == $request->is_true){
+                $option->update(['is_true' => 1]);
+            }
+            $option->body = $request['opsi_'.$option->id];
+            $option->save();
+        }
+
+        if(!($request->is_published)){
+            return \redirect()->intended('soal')->with('update_success', 'Soal Berhasil Diperbarui');
+        }
+
+        return \redirect()->intended('soal')->with('publish_success', 'Soal Berhasil Dipublish');
+
+        // $question->options->where('is_true', 1)->update(['is_true', 0]);
+        // $question->options->find($request->is_true)->update(['is_true', 1]);
+
     }
 
     /**
@@ -131,6 +171,9 @@ class QuestionController extends Controller
      */
     public function destroy(Question $question)
     {
-        //
+        Question::destroy($question->id);
+        // $question->delete();
+        // $question->save();
+        return \redirect()->intended('soal');
     }
 }

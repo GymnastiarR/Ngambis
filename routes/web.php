@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionController;
@@ -29,17 +30,21 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 // });
 
 Route::post('soal', [QuestionController::class, 'store'])->middleware(['verified']);
-Route::resource('soal', QuestionController::class)->middleware(['verified']);
+Route::get('soal/{question}/edit', [QuestionController::class, 'edit'])->middleware(['verified']);
+Route::put('soal/{question}', [QuestionController::class, 'update'])->middleware(['verified']);
+Route::delete('soal/{question}', [QuestionController::class, 'destroy'])->middleware(['verified']);
+Route::get('soal', [QuestionController::class, 'index'])->name('soal')->middleware(['verified']);
+Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
 
 Route::get('/latihan', function () {
     return view('latihan');
-})->middleware(['auth']);
+})->name('latihan')->middleware(['auth']);
 
-Route::get('/ujian/{category}/{time}', [UjianController::class, 'index']);
+Route::get('/ujian/{category}/{time}', [UjianController::class, 'index'])->middleware(['auth']);
 
-Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
+Route::get('/histories', [HistoryController::class, 'index'])->name('history')->middleware(['auth']);
 
-Route::post('ujian/nilai', [UjianController::class, 'grade'])->name('ujian.nilai');
+Route::post('ujian/nilai', [UjianController::class, 'grade'])->name('ujian.nilai')->middleware(['auth']);
 
 
 require __DIR__.'/auth.php';

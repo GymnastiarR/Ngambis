@@ -42,13 +42,13 @@
             </div>
 
             <div id="status" class="w-1/5 sticky top-0 max-h-fit hidden">
-                <div class="my-3 py-3 px-2 bg-whiteflex flex-col w-full box-border rounded-full justify-center bg-blue-200 flex sticky top-10">
-                    <span>Time</span><p id="time" class="text-2xl">{{ $coutdown }}</p>
+                <div class="my-3 py-3 px-2 flex w-full box-border rounded-full justify-center items-center bg-blue-200 sticky top-10">
+                    <p>Time :  </p><p id="time" class="text-2xl">{{ $coutdown }}</p>
                 </div>
                 <div class="bg-white w-full p-7 mb-5 shadow-lg sticky top-40">
                     <ul class="flex justify-evenly flex-wrap w-full">
                         @foreach ($questions as $question)
-                            <li name="{{ $question->id }}" class="w-[40px] h-[40px] text-center py-2 bg-gray-300 mb-3" ><a href="#{{ $question->id }}">{{ $loop->iteration }}</a></li>
+                            <li name="{{ $question->id }}" class="w-[40px] h-[40px] text-center py-2 bg-gray-300 mb-3 mr-1" ><a href="#{{ $question->id }}">{{ $loop->iteration }}</a></li>
                         @endforeach
                     </ul>
                 </div>

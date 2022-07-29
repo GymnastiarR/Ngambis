@@ -15,6 +15,7 @@ class UjianController extends Controller
         $time = $time * 10;
         $minutes = floor($time/60);
         $second = $time%60;
+        \session()->put('questions', $questions);
         \session()->put('time', $time);
         return \view('ujian', [
             'questions' => $questions,
@@ -26,34 +27,57 @@ class UjianController extends Controller
         $grade = 0;
         $questions = [];
 
-        foreach($request as $key=>$value)
-        {
-            if($key == '_token'){
+        // return $request;
+
+        // foreach($request as $key => $value)
+        // {
+        //     return $request;
+        //     // return $key;
+        //     if($key == '_token'){
+        //         continue;
+        //     }
+
+        //     // return $key;
+        //     $chosen[] = Option::find($value);
+        //     $questions[] = Question::with('options')->find($key);
+            
+
+
+        //     if(Option::find($value)->is_true){
+        //         $grade += 1;
+        //     }
+        // }
+
+        // return $request->key;
+
+        foreach (\session('questions') as $question) {
+            if(!(\session()->has('time'))){
+                return \redirect()->intended('latihan');
+            }
+
+            if(!($request->has($question->id))){
                 continue;
             }
 
-
-            $chosen = Option::find($value);
-            $questions[] = Question::with('options')->find($key);
-
-
-            if($chosen->is_true){
-                $grade += 1;
+            if($question->options->where('is_true', 1)[0]->id != $request[$question->id]){
+                continue;
             }
+
+            $grade += 1;
         }
 
-        // history::create([
-        //     'user_id' => Auth::user()->id,
-        //     'grade' => $grade,
-        //     'time' => 100,
-        // ]);
+        history::create([
+            'user_id' => Auth::user()->id,
+            'grade' => $grade,
+            'time' => \session('time'),
+        ]);
 
-        // \session()->remove('time');
+        \session()->remove('time');
 
         return \view('nilai', [
-            'your_answare' => $chosen,
+            'your_answare' => Option::whereIn('id', $request)->get(),
             'grade' => $grade,
-            'questions' => $questions
+            'questions' => \session('questions'),
         ]);
     }
     // public function UniqueRandomNumbersWithinRange($min, $max, $quantity) {

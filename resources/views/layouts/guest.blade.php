@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <script src="https://kit.fontawesome.com/9aa4e74c46.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/particle.css">
         <script src="js/jquery.js"></script>
         <!-- Scripts -->

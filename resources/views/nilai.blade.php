@@ -8,6 +8,7 @@
         <x-header-menu>
             
         </x-header-menu>
+    {{-- {{ dd($your_answare) }} --}}
         <div class="flex flex-col bg-white shadow-2xl w-full px-4 md:px-8 py-10 rounded-lg my-5">
             <div class="bg-[#FFFFFF] text-lg font-semibold shadow-xl rounded-xl w-1/4 p-5 mb-5">
                 <p>Nilai Kamu : {{ $grade }}</p>
@@ -27,10 +28,10 @@
                                     </div>
                                     <div>
                                         <div>
-                                            <span>Jawaban Benar : </span>{!! $question->options->where('is_true', 1)[0]->body !!}
+                                            <span>Jawaban Benar : </span>{!! $question->options->where('is_true', 1)->first()->body !!}
                                         </div>
                                         <div>
-                                            <span>Jawaban Kamu : </span>{!! $your_answare->body !!}
+                                            <span>Jawaban Kamu : </span>{!! ($your_answare->where('question_id', $question->id)->first()->body) ?? '' !!}
                                         </div>
                                     </div>
                                 </div>

@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/9aa4e74c46.js" crossorigin="anonymous"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
     </head>
-    <body class="font-sans antialiased bg-gradient-to-br from-slate-200 to-blue-200  p-2 lg:p-6 flex flex-col-reverse md:flex-row min-h-screen box-border">
+    <body class="font-sans antialiased bg-gradient-to-br from-slate-200 to-blue-200  p-2 lg:p-3 flex flex-col-reverse md:flex-row min-h-screen box-border">
         {{-- <div class="min-h-screen bg-gray-100"> --}}
             {{-- @include('layouts.navigation') --}}
 
