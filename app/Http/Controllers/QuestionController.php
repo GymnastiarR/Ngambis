@@ -42,6 +42,10 @@ class QuestionController extends Controller
      */
     public function store(StoreQuestionRequest $request)
     {
+        $request->validate([
+            'question' => 'required',
+            'category' => 'required'
+        ]);
         // $request->validate();
         // return $request->is_published;
         // return $request->all();

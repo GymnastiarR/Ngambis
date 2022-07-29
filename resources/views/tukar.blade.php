@@ -12,7 +12,7 @@
             <h1 class="text-3xl text-bold">Tukar Point Kamu</h1>
             <div class="">
                 <div class="mb-8">
-                    <div class="mb-7">
+                    <div class="mb-5">
                         <h2 class="text-2xl text-center">Jumlah Point Ditukar</h2>
                     </div>
                     <div class="flex flex-wrap justify-evenly">
@@ -22,8 +22,8 @@
                         <div class="border-2 py-2 px-4">2000 Point = Rp. 100.000</div>
                     </div>
                 </div>
-                <div class="mb-8">
-                    <div class="mb-7">
+                <div class="mt-8">
+                    <div class="mb-5">
                         <h2 class="text-2xl text-center">Pilih Metode Pembayaran</h2>
                     </div>
                     <div class="flex flex-wrap justify-evenly">

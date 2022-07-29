@@ -8,7 +8,7 @@
         <x-header-menu>
             
         </x-header-menu>
-        <div class="my-7 py-8 lg:px-16 px-2 shadow-2xl bg-white flex flex-col w-full box-border rounded-2xl">
+        <div class="my-7 py-8 lg:px-16 px-2 shadow-2xl bg-white flex flex-col w-full box-border rounded-2xl min-h-[70vh]">
             @if (session()->has('update_success'))
             <div id="alert" class="rounded-2xl fixed top-44 bg-slate-500 opacity-40 text-white text-lg left-1/3 right-1/3 py-5">
                 <p class="text-center">{{ session('update_success') }}</p>
@@ -38,9 +38,10 @@
                     <div class="border-b-2 w-full mb-5 border-black"></div>
                 </div>
                 <div class="flex items-center">
-                    <a href="soal/create" class="bg-blue-400 rounded-xl w-24 h-10 flex justify-center items-center">Buat Soal</a>
+                    <a href="soal/create" class="bg-gradient-to-tr from-gray-400 to-blue-400 rounded-full w-28 h-12 flex justify-center items-center shadow-xl font-semibold text-white">Buat Soal</a>
                 </div>
             </div>
+            @if (!($questions->isEmpty()))
             @foreach ($questions as $question)
             <div class="w-full">
                 <div class="flex mb-3">
@@ -72,6 +73,12 @@
             <div>
                 {{ $questions->links() }}
             </div>
+            @else
+            <div class="flex items-center h-full w-full justify-center">
+                <h2 class="text-center text-xl md:text-3xl text-gray-500 font-bold">Kamu Belum Membuat Soal Satupun. Ayo Buat dan Berbagi Soal Sekarang</h2>
+            </div>
+            @endif
+
         </div>
     </div>
 </x-app-layout>

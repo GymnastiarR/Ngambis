@@ -22,54 +22,61 @@
                 <option value="Biologi">Biologi</option>
                 <option value="Fisika">Fisika</option>
                 <option value="Kimia">Kimia</option>
-                <option value="sejarah">sejarah</option>
-                <option value="sosiologi">sosiologi</option>
+                <option value="Sejarah">Sejarah</option>
+                <option value="Sosiologi">Sosiologi</option>
+                <option value="Geografi">Geografi</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Penalaran-Umum">Penalaran Umum</option>
+                <option value="Pengetahuan-Kuantitatif">Pengetahuan Kuantitatif</option>
                 <option value="geografi">geografi</option>
                 <option value="ekonomi">ekonomi</option>
               </datalist>
             </div>
+            @error('body')
+              <p class="italic text-red-600 mb-2">{{ $message }}</p>
+            @enderror
             <div class="lg:w-full mb-6 relative">
               <textarea id="editor" placeholder="Masukkan Soal. . . ." name="question" class="w-4/5"></textarea>
             </div>
             <div class="w-3/5">
               <div class="mb-6">
                 <div class="flex items-center mb-4">
-                  <input type="radio" name="is_true" class="mr-3" value="opsi_satu">
+                  <input type="radio" name="is_true" class="mr-3" value="opsi_satu" required>
                   <h2 class="">Opsi 1</h2>
                 </div>
                 <textarea placeholder="Opsi 1. . . ." name="opsi_satu" class="ckeditor"></textarea>
               </div>        
               <div class="mb-6">
                 <div class="flex items-center mb-4">
-                  <input type="radio" name="is_true" class="mr-3" value="opsi_dua" >
+                  <input type="radio" name="is_true" class="mr-3" value="opsi_dua"  required>
                   <h2 class="">Opsi 2</h2>
                 </div>
                 <textarea placeholder="Opsi 2. . . ." name="opsi_dua" class="ckeditor"></textarea>
               </div>        
               <div class="mb-6">
                 <div class="flex items-center mb-4">
-                  <input type="radio" name="is_true" class="mr-3" value="opsi_tiga" >
+                  <input type="radio" name="is_true" class="mr-3" value="opsi_tiga" required >
                   <h2 class="">Opsi 3</h2>
                 </div>
                 <textarea placeholder="Opsi 3. . . ." name="opsi_tiga" class="ckeditor"></textarea>
               </div>        
               <div class="mb-6">
                 <div class="flex items-center mb-4">
-                  <input type="radio" name="is_true" class="mr-3" value="opsi_empat" >
+                  <input type="radio" name="is_true" class="mr-3" value="opsi_empat" required>
                   <h2 class="">Opsi 4</h2>
                 </div>
                 <textarea placeholder="Opsi 4. . . ." name="opsi_empat" class="ckeditor"></textarea>
               </div>        
               <div class="mb-6">
                 <div class="flex items-center mb-4">
-                  <input type="radio" name="is_true" class="mr-3" value="opsi_lima" >
-                  <h2 class="">Opsi 4</h2>
+                  <input type="radio" name="is_true" class="mr-3" value="opsi_lima" required >
+                  <h2 class="">Opsi 5</h2>
                 </div>        
                 <textarea placeholder="Opsi 5. . . ." name="opsi_lima" class="ckeditor"></textarea>
               </div>        
             </div>
-            <button class="w-32 rounded-full h-12 bg-blue-300" name="is_published" value="0">Simpan</button>
-            <button class="w-32 rounded-full h-12 bg-green-300" value="1" name="is_published">Kirim</button>
+            <button class="w-32 rounded-full h-12 bg-blue-300 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-400 hover:text-white shadow-2xl transition-all duration-700 font-semibold" name="is_published" value="0">Simpan</button>
+            <button class="w-32 rounded-full h-12 bg-green-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-green-500 hover:text-white shadow-2xl transition-all duration-700 font-semibold" value="1" name="is_published">Kirim</button>
           </form>
         </div>
     </div>

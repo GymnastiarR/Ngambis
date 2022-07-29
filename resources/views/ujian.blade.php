@@ -26,11 +26,11 @@
                                     <div class="mb-4 text-sm md:text-lg">
                                         {!! $question->body !!}
                                     </div>
-                                    <div >
-                                        @foreach ($question->options as $option)
-                                        <input class="mr-3" type="radio" name="{{ $question->id }}" id="{{ $option->id }}" value="{{ $option->id }}"><label for="">a. {!! $option->body !!}</label>
-                                        @endforeach
+                                    @foreach ($question->options as $option)
+                                    <div class="w-full flex items-center">
+                                        <input class="mr-3" type="radio" name="{{ $question->id }}" id="{{ $option->id }}" value="{{ $option->id }}"><label for="" class="w-auto">{!! $option->body !!}</label>
                                     </div>
+                                    @endforeach
                                 </div>
                             </li>
                         @endforeach
@@ -43,7 +43,7 @@
 
             <div id="status" class="w-1/5 sticky top-0 max-h-fit hidden">
                 <div class="my-3 py-3 px-2 flex w-full box-border rounded-full justify-center items-center bg-blue-200 sticky top-10">
-                    <p>Time :  </p><p id="time" class="text-2xl">{{ $coutdown }}</p>
+                    <p>Time :  </p><p id="time" class="sm:text-lg lg:text-2xl">{{ $coutdown }}</p>
                 </div>
                 <div class="bg-white w-full p-7 mb-5 shadow-lg sticky top-40">
                     <ul class="flex justify-evenly flex-wrap w-full">

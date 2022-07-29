@@ -13,6 +13,9 @@
 <div class="md:mb-8 mr-3 md:mr-0 text-white {{ (URL::current() == 'http://127.0.0.1:8000/histories') ? 'bg-gradient-to-r from-[#111D21] to-[#3546DC] md:w-16 md:h-16 w-10 h-10 rounded-full shadow-2xl flex justify-center items-center' : ''}}">
     <a href="{{ route('history') }}"><i class="fa-solid fa-clock-rotate-left fa-2xl"></i></a>
 </div>
+<div class="md:mb-8 mr-3 md:mr-0 text-white {{ (URL::current() == 'http://127.0.0.1:8000/tukar-point') ? 'bg-gradient-to-r from-[#111D21] to-[#3546DC] md:w-16 md:h-16 w-10 h-10 rounded-full shadow-2xl flex justify-center items-center' : ''}}">
+    <a href="{{ route('tukar') }}"><i class="fa-solid fa-coins fa-2xl"></i></a>
+</div>
 <script src="http://127.0.0.1:8000/js/jquery.js"></script>
 <script>
     if($(window).width() < '720'){

@@ -39,7 +39,7 @@ Route::post('upload', [ImageController::class, 'store'])->name('images.upload');
 
 Route::get('tukar-point', function(){
     return view('tukar');
-})->middleware(['verified']);
+})->name('tukar')->middleware(['verified']);
 
 Route::get('/latihan', function () {
     return view('latihan');

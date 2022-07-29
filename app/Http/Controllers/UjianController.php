@@ -22,6 +22,7 @@ class UjianController extends Controller
             'coutdown' => $minutes . ':' . $second,
         ]);
     }
+
     public function grade(Request $request){
         $request = \collect($request);
         $grade = 0;
@@ -59,12 +60,17 @@ class UjianController extends Controller
                 continue;
             }
 
-            if($question->options->where('is_true', 1)[0]->id != $request[$question->id]){
+            // \dd($question->options->where('is_true', 1)->first(). $request[$question->id]);
+
+            if($question->options->where('is_true', 1)->first()->id != $request[$question->id]){
                 continue;
             }
 
+
             $grade += 1;
         }
+
+        // \dd($grade);
 
         history::create([
             'user_id' => Auth::user()->id,
@@ -72,7 +78,7 @@ class UjianController extends Controller
             'time' => \session('time'),
         ]);
 
-        \session()->remove('time');
+        // \session()->remove('time');
 
         return \view('nilai', [
             'your_answare' => Option::whereIn('id', $request)->get(),

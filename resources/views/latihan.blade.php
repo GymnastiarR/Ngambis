@@ -144,7 +144,7 @@
         </div>
         <div id="alert" class="hidden">
             <div class="fixed top-0 bottom-0 left-0 right-0 bg-[#4e4e4e46] flex justify-center items-center">
-                <div class="w-80 h-60 bg-white rounded-xl p-10 flex flex-col justify-center items-center">
+                <div class="w-80 h-60 bg-white rounded-xl p-10 flex flex-col justify-center items-center shadow-2xl">
                     <h3 class="text-center text-xl font-bold mb-5">Target Waktu</h3>
                     <div class="flex justify-center items-center mb-3">
                         <label for="">Atur Durasi : </label> <input id="time" type="range" min="60" max="300">
@@ -153,8 +153,8 @@
                         <output></output><span> Detik / Soal</span>
                     </div>
                     <div>
-                        <button type="button" id="submit" class="bg-blue-100 rounded-lg py-2 px-4">Mulai</button>
-                        <button type="button" id="cancel" class="bg-red-100 rounded-lg py-2 px-4">Batal</button>
+                        <button type="button" id="submit" class="bg-blue-200 rounded-2xl py-2 px-6 hover:bg-blue-600 transition-all hover:text-white duration-700">Mulai</button>
+                        <button type="button" id="cancel" class="bg-red-200 rounded-2xl py-2 px-6 hover:bg-red-500 transition-all hover:text-white duration-700">Batal</button>
                     </div>
                 </div>
             </div>

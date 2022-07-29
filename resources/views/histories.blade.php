@@ -8,9 +8,11 @@
         <x-header-menu>
             
         </x-header-menu>
-        <div class="my-7 py-8 lg:px-16 px-2 shadow-2xl bg-white flex flex-col w-full box-border rounded-2xl min-h-full">
+        <div class="my-7 py-8 lg:px-16 px-2 shadow-2xl bg-white flex flex-col w-full box-border rounded-2xl min-h-[80vh]">
             <h1 class="text-2xl font-bold mb-2">History Latihan Kamu</h1>
             <div class="border-b-2 border-black w-36 mb-6"></div>
+            {{-- {{ dd($histories) }} --}}
+            @if (!($histories->isEmpty()))
             <table class="mb-4">
                 <thead class="min-w-full border-2 bg-slate-500 text-white">
                     <th>No</th>
@@ -30,6 +32,12 @@
                 </tbody>
             </table>
             {{ $histories->links() }}
+            @else
+                <div class="w-full h-[50vh] flex items-center justify-center">
+                    <h2 class="md:text-3xl font-bold text-gray-500 text-lg text-center">Kamu belum pernah melakukan test. Yuk test Sekarang</h2>
+                </div>
+            @endif
+
         </div>
     </div>
 </x-app-layout>

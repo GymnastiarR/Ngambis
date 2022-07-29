@@ -23,7 +23,7 @@
                     </div>
                     <p class="text-center text-white text-5xl md:text-7xl font-extrabold ">{{ $point }}</p>
                     <p class="text-center">
-                        <a href="" class="underline text-white text-base md:text-lg ">Tukar Point</a>
+                        <a href="{{ route('tukar') }}" class="underline text-white text-base md:text-lg ">Tukar Point</a>
                     </p>
                 </div>
                 <div class=" mb-4 w-[240px] md:w-[360px] bg-[#A4DEFF] h-[240px] md:h-[360px] rounded-[40px] lg:rounded-[80px] p-6 pb-16 lg:py-16 lg:px-16 bg-gradient-to-bl from-[#A4DEFF] to-[#0088D4] flex flex-col justify-between">
@@ -41,7 +41,7 @@
                         <h2 class="text-white font-extrabold text-lg md:text-2xl mb-3">Nilai Terbaik</h2>
                         <div class="border-b-4 w-2/5"></div>
                     </div>
-                    <p class="text-center text-white text-5xl md:text-7xl font-extrabold ">{{ $best_grade->grade * 10 }}</p>
+                    <p class="text-center text-white text-5xl md:text-7xl font-extrabold ">{{ ($best_grade) ? $best_grade->grade  * 10 : '0'}}</p>
                     <p class="text-center">
                         <a href="{{ route('history') }}" class="underline text-white text-base md:text-lg ">Lihat Detail</a>
                     </p>
